@@ -19,7 +19,7 @@ jobs:
         uses: JetBrains/qodana-action@main
         with:
           args: |
-            --source-directory,java-part,--config,java-qodana.yaml
+            --source-directory,java-part,--config,java-qodana.yaml,-l,jetbrains/qodana-jvm:2024.3
           post-pr-comment: 'true'
           upload-result: 'true'
           artifact-name: qodana-backend
@@ -40,7 +40,7 @@ jobs:
         uses: JetBrains/qodana-action@main
         with:
           args: |
-            --source-directory,vite-typescript-part,--config,js-qodana.yaml
+            --source-directory,vite-typescript-part,--config,js-qodana.yaml,-l,jetbrains/qodana-js:2024.3
           post-pr-comment: 'true'
           upload-result: 'true'
           artifact-name: qodana-frontend
@@ -61,7 +61,7 @@ jobs:
         uses: JetBrains/qodana-action@main
         with:
           args: |
-            --source-directory,java-second-part,--config,java-second-qodana.yaml
+            --source-directory,java-second-part,--config,java-second-qodana.yaml,-l,jetbrains/qodana-jvm:2024.3
           post-pr-comment: 'true'
           upload-result: 'true'
           artifact-name: qodana-second-backend
@@ -82,7 +82,7 @@ jobs:
         uses: JetBrains/qodana-action@main
         with:
           args: |
-            --source-directory,html-part,--config,js-html-qodana.yaml
+            --source-directory,html-part,--config,js-html-qodana.yaml,-l,jetbrains/qodana-js:2024.3
           post-pr-comment: 'true'
           upload-result: 'true'
           artifact-name: qodana-second-frontend
